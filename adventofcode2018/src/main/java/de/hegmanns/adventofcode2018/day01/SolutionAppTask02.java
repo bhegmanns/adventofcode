@@ -1,12 +1,13 @@
 package de.hegmanns.adventofcode2018.day01;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashSet;
 
 public class SolutionAppTask02 {
 
 	public static void main(String[] args) {
-		List<Long> results = new ArrayList<>(140 * 1300);
+		Collection<Long> results = null;
+		results = new HashSet<>(140 * 1025);
 
 		long sum = 0;
 		boolean found = false;
