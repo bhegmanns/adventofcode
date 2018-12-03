@@ -1,5 +1,6 @@
 package de.hegmanns.adventofcode2018.day01;
 
+
 public class Input {
 
 	public static long[] NUMBERS = {-1
