@@ -13,9 +13,7 @@ public class TimeTable {
 		for (int i = time.getMinute() ; i < isSleepingMinute.length ; i++) {
 			isSleepingMinute[i] = sleeping;
 		}
-		if (hour == 23 || hour == 0) {
-//			beforeZero = true;
-		}else {
+		if (hour != 23 && hour != 0) {
 			throw new RuntimeException("unexpected situation, hour isn't 0 or 23: " + hour + "; Record:" + record);
 		}
 		return beforeZero;
