@@ -1,12 +1,11 @@
 package de.hegmanns.adventofcode2018.day05;
 
-import java.util.Map;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class SolutionAppDay05Task02 {
 
 	public static void main(String[] args) {
+		long time = System.currentTimeMillis();
 		String s = Input05.getString();
 		long minimalLength = s.length();
 		int[] charArray = IntStream.rangeClosed('a', 'z').toArray();
@@ -35,6 +34,7 @@ public class SolutionAppDay05Task02 {
 		}
 		
 		System.out.println("MinimalLength = " + minimalLength);
+		System.out.println("" + (System.currentTimeMillis() - time));
 	}
 
 	private static String getDeletetOf(String string, char a) {
