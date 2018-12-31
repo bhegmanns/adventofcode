@@ -1,12 +1,17 @@
 package de.hegmanns.adventofcode2018.day11;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import java.util.stream.Stream;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 
+@RunWith(JUnitPlatform.class)
 public class PowerLevelTest {
 
 	public static Stream<PowerLevelInfo> getTestCases(){
@@ -21,9 +26,13 @@ public class PowerLevelTest {
 	@MethodSource("getTestCases")
 	public void testCase(PowerLevelInfo powerLevelInfo) {
 		int calculatedPowerLevel = SolutionAppDay11Task02.calculatePowerlevel(powerLevelInfo.x, powerLevelInfo.y, powerLevelInfo.serialNumber);
-		MatcherAssert.assertThat(calculatedPowerLevel, Matchers.is(powerLevelInfo.expectedPowerLevel));
+		assertThat(calculatedPowerLevel, is(powerLevelInfo.expectedPowerLevel));
 	}
-	
+
+	@Test
+	public void meinTest() {
+		
+	}
 }
 
 class PowerLevelInfo{
